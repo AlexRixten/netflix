@@ -2,6 +2,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ERoutes } from "@/types/enums/routes";
+import { GithubSignInButton } from "@/components/github-signin-button";
+import { GoogleSignInButton } from "@/components/google-signin-button";
 
 export default function SignIn() {
   return (
@@ -33,8 +35,8 @@ export default function SignIn() {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        {/*<GithubSignInButton />*/}
-        {/*<GoogleSignInButton />*/}
+        <GithubSignInButton />
+        <GoogleSignInButton />
       </div>
     </div>
   );
