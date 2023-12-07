@@ -1,4 +1,9 @@
 export enum ERoutes {
-    SignIn = '/sign-in',
-    SignUp = '/sign-up',
+  Me = "/me",
+  SignIn = "/sign-in",
+  SignUp = "/sign-up",
+  Shows = "/shows",
+  Movies = "/movies",
+  Recently = "/recently",
+  WatchList = "/watch-list",
 }

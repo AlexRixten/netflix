@@ -1,9 +1,15 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ERoutes } from "@/types/enums/routes";
+import { ERoutes } from "@/types/enums/routes.enum";
 import { GithubSignInButton } from "@/components/github-signin-button";
 import { GoogleSignInButton } from "@/components/google-signin-button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SignIn",
+  description: "",
+};
 
 export default function SignIn() {
   return (

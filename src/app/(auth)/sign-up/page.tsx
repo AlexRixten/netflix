@@ -1,7 +1,15 @@
 import Link from "next/link";
-import { ERoutes } from "@/types/enums/routes";
+import { ERoutes } from "@/types/enums/routes.enum";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+import { GithubSignInButton } from "@/components/github-signin-button";
+import { GoogleSignInButton } from "@/components/google-signin-button";
+
+export const metadata: Metadata = {
+  title: "SignUp",
+  description: "",
+};
 
 export default function SignUp() {
   return (
@@ -33,8 +41,8 @@ export default function SignUp() {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        {/*<GithubSignInButton />*/}
-        {/*<GoogleSignInButton />*/}
+        <GithubSignInButton />
+        <GoogleSignInButton />
       </div>
     </div>
   );

@@ -3,10 +3,20 @@ import Image from "next/image";
 
 import BackgroundImage from "../../../public/login_background.jpg";
 import Logo from "../../../public/netflix_logo.svg";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/utils/auth";
+import { redirect } from "next/navigation";
+import { ERoutes } from "@/types/enums/routes.enum";
 
 interface IAuthLayout extends PropsWithChildren {}
 
-export default function AuthLayout({ children }: IAuthLayout) {
+export default async function AuthLayout({ children }: IAuthLayout) {
+  const session = await getServerSession(authOptions);
+
+  if (session) {
+    redirect(ERoutes.Me);
+  }
+
   return (
     <div className="relative flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent">
       <Image
