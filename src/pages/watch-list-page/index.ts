@@ -1,0 +1,1 @@
+export { WatchListPage } from "./WatchListPage";
